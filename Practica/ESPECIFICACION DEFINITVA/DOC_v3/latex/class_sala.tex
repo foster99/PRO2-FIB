@@ -1,0 +1,233 @@
+\hypertarget{class_sala}{}\section{Referencia de la Clase Sala}
+\label{class_sala}\index{Sala@{Sala}}
+
+
+Representa una sala virtual asociada a un identificador y que contiene una estantería junto a datos relacionadas con la misma\+: dimensiones, espacio ocupado y espacio máximo.  
+
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sala_ab6f672b31658edd49b5d409bf9fbe659}{Sala} (int id)
+\begin{DoxyCompactList}\small\item\em Creadora de \hyperlink{class_sala}{Sala} asociada a un identificador. \end{DoxyCompactList}\item 
+void \hyperlink{class_sala_a748f6e7dd49a9c5f67623640f774e0ff}{poner\+\_\+items} (const string \&prod, int cant)
+\begin{DoxyCompactList}\small\item\em Modificadora que añade una cantidad concreta de items a una estantería. \end{DoxyCompactList}\item 
+void \hyperlink{class_sala_a4e449719446b07b4626c8502a87a5af2}{quitar\+\_\+items} (const string \&prod, int cant)
+\begin{DoxyCompactList}\small\item\em Modificadora que quita una cantidad concreta de items a una estantería. \end{DoxyCompactList}\item 
+void \hyperlink{class_sala_aac11486a22560bdcdb7771e9692cfa75}{compactar} ()
+\begin{DoxyCompactList}\small\item\em Modificadora que compacta todos los elementos de la estantería del parámetro implicito. \end{DoxyCompactList}\item 
+void \hyperlink{class_sala_aaac8d848595b493ea08516f2101b829e}{reorganizar} ()
+\begin{DoxyCompactList}\small\item\em Modificadora que ordena alfabeticamente (segun su identificador) todos los elementos de la estantería del parámetro implicito. \end{DoxyCompactList}\item 
+bool \hyperlink{class_sala_abed3d192d416f7f14be6e8597f5e6059}{redimensionar} (int fil, int col)
+\begin{DoxyCompactList}\small\item\em Modificadora que, si los items que contiene la estaneria caben en las nuevas dimensiones, modifica las dimensiones de la misma y compacta los items. \end{DoxyCompactList}\item 
+void \hyperlink{class_sala_a1b8b14baf2acaf5a118fc0e426fc107d}{asignacion\+\_\+dimensiones\+\_\+estanteria} (int filas, int columnas)
+\begin{DoxyCompactList}\small\item\em Modificadora que otorga las características espaciales a una estaneria adimensionada. \end{DoxyCompactList}\item 
+void \hyperlink{class_sala_afd8421dde833322ed676c232e88cb77c}{escribir} ()
+\begin{DoxyCompactList}\small\item\em Consultora encargada de imprimir por pantalla la estaneria del parámetro implicito. \end{DoxyCompactList}\item 
+string \hyperlink{class_sala_acb7088c40e1720d1604fc37a4d10443b}{consultar\+\_\+pos} (int i, int j)
+\begin{DoxyCompactList}\small\item\em Consultora que retorna el identificador del item que se encuentra en una posicion concreta. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Representa una sala virtual asociada a un identificador y que contiene una estantería junto a datos relacionadas con la misma\+: dimensiones, espacio ocupado y espacio máximo. 
+
+Ofrece operaciones para modificar el contenido de las estanterías así como las variables asociadas a la misma y citadas previamente. 
+
+Definición en la línea 31 del archivo Sala.\+hh.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\index{Sala@{Sala}!Sala@{Sala}}
+\index{Sala@{Sala}!Sala@{Sala}}
+\subsubsection[{\texorpdfstring{Sala(int id)}{Sala(int id)}}]{\setlength{\rightskip}{0pt plus 5cm}Sala\+::\+Sala (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sala_ab6f672b31658edd49b5d409bf9fbe659}{}\label{class_sala_ab6f672b31658edd49b5d409bf9fbe659}
+
+
+Creadora de \hyperlink{class_sala}{Sala} asociada a un identificador. 
+
+\begin{DoxyPrecond}{Precondición}
+El identificador es un entero positivo y diferente de cero. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es una sala asociada al identificador {\itshape id} con una estantería vacía y de tamaño cero. 
+\end{DoxyPostcond}
+\begin{DoxyParagraph}{Coste}
+Constante. 
+\end{DoxyParagraph}
+
+
+\subsection{Documentación de las funciones miembro}
+\index{Sala@{Sala}!poner\+\_\+items@{poner\+\_\+items}}
+\index{poner\+\_\+items@{poner\+\_\+items}!Sala@{Sala}}
+\subsubsection[{\texorpdfstring{poner\+\_\+items(const string \&prod, int cant)}{poner_items(const string &prod, int cant)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sala\+::poner\+\_\+items (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{prod, }
+\item[{int}]{cant}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sala_a748f6e7dd49a9c5f67623640f774e0ff}{}\label{class_sala_a748f6e7dd49a9c5f67623640f774e0ff}
+
+
+Modificadora que añade una cantidad concreta de items a una estantería. 
+
+\begin{DoxyPrecond}{Precondición}
+La cantidad {\itshape cant} es positiva. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+la estantería contenida en el parámetro implícito ha sido llenada con una cantidad {\itshape cant} de productos {\itshape prod} o bien hasta que se ha llenado la estaneria o bien hasta que se haya agotado la susodicha cantidad. El rellenado se habra realizado llenando primero los huecos a partir del hueco que fuera antes. 
+\end{DoxyPostcond}
+\begin{DoxyParagraph}{Coste}
+Lineal. 
+\end{DoxyParagraph}
+\index{Sala@{Sala}!quitar\+\_\+items@{quitar\+\_\+items}}
+\index{quitar\+\_\+items@{quitar\+\_\+items}!Sala@{Sala}}
+\subsubsection[{\texorpdfstring{quitar\+\_\+items(const string \&prod, int cant)}{quitar_items(const string &prod, int cant)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sala\+::quitar\+\_\+items (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{prod, }
+\item[{int}]{cant}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sala_a4e449719446b07b4626c8502a87a5af2}{}\label{class_sala_a4e449719446b07b4626c8502a87a5af2}
+
+
+Modificadora que quita una cantidad concreta de items a una estantería. 
+
+\begin{DoxyPrecond}{Precondición}
+La cantidad {\itshape cant} es positiva. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+A la estantería contenida en el parámetro implícito le ha sido retirada una cantidad {\itshape cant} de productos {\itshape prod} o bien hasta que se ha llenado la estaneria o bien hasta que se haya agotado la susodicha cantidad. La acción se habra realizado quitando primero los items que vayan antes. 
+\end{DoxyPostcond}
+\begin{DoxyParagraph}{Coste}
+Lineal. 
+\end{DoxyParagraph}
+\index{Sala@{Sala}!compactar@{compactar}}
+\index{compactar@{compactar}!Sala@{Sala}}
+\subsubsection[{\texorpdfstring{compactar()}{compactar()}}]{\setlength{\rightskip}{0pt plus 5cm}void Sala\+::compactar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sala_aac11486a22560bdcdb7771e9692cfa75}{}\label{class_sala_aac11486a22560bdcdb7771e9692cfa75}
+
+
+Modificadora que compacta todos los elementos de la estantería del parámetro implicito. 
+
+\begin{DoxyPrecond}{Precondición}
+Cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Todos los elementos de la estantería del parámetro implícito quedan agrupados (sin espacios vacíos entre ellos) lo mas abajo y a la izquierda posible de la misma y manteniendo el orden previo. 
+\end{DoxyPostcond}
+\begin{DoxyParagraph}{Coste}
+Lineal. 
+\end{DoxyParagraph}
+\index{Sala@{Sala}!reorganizar@{reorganizar}}
+\index{reorganizar@{reorganizar}!Sala@{Sala}}
+\subsubsection[{\texorpdfstring{reorganizar()}{reorganizar()}}]{\setlength{\rightskip}{0pt plus 5cm}void Sala\+::reorganizar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sala_aaac8d848595b493ea08516f2101b829e}{}\label{class_sala_aaac8d848595b493ea08516f2101b829e}
+
+
+Modificadora que ordena alfabeticamente (segun su identificador) todos los elementos de la estantería del parámetro implicito. 
+
+\begin{DoxyPrecond}{Precondición}
+Cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La estantería del parámetro implicito tiene los items compactados y ordenados alfabeticamente. 
+\end{DoxyPostcond}
+\begin{DoxyParagraph}{Coste}
+Logarítmico. 
+\end{DoxyParagraph}
+\index{Sala@{Sala}!redimensionar@{redimensionar}}
+\index{redimensionar@{redimensionar}!Sala@{Sala}}
+\subsubsection[{\texorpdfstring{redimensionar(int fil, int col)}{redimensionar(int fil, int col)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Sala\+::redimensionar (
+\begin{DoxyParamCaption}
+\item[{int}]{fil, }
+\item[{int}]{col}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sala_abed3d192d416f7f14be6e8597f5e6059}{}\label{class_sala_abed3d192d416f7f14be6e8597f5e6059}
+
+
+Modificadora que, si los items que contiene la estaneria caben en las nuevas dimensiones, modifica las dimensiones de la misma y compacta los items. 
+
+\begin{DoxyPrecond}{Precondición}
+Los enteros {\itshape fil} y {\itshape col} son positivos o iguales a 0. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Si la cantidad de items cabe en las nuevas dimensiones, la estantería del parámetro implicito queda redimensionada a {\itshape fil x col} y tiene los items compactados. Por contra, si la cantidad de items no cabe en las nuevas dimensiones, se produce un error y el parámetro implicito permanece igual. 
+\end{DoxyPostcond}
+\begin{DoxyParagraph}{Coste}
+Lineal. 
+\end{DoxyParagraph}
+\index{Sala@{Sala}!asignacion\+\_\+dimensiones\+\_\+estanteria@{asignacion\+\_\+dimensiones\+\_\+estanteria}}
+\index{asignacion\+\_\+dimensiones\+\_\+estanteria@{asignacion\+\_\+dimensiones\+\_\+estanteria}!Sala@{Sala}}
+\subsubsection[{\texorpdfstring{asignacion\+\_\+dimensiones\+\_\+estanteria(int filas, int columnas)}{asignacion_dimensiones_estanteria(int filas, int columnas)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sala\+::asignacion\+\_\+dimensiones\+\_\+estanteria (
+\begin{DoxyParamCaption}
+\item[{int}]{filas, }
+\item[{int}]{columnas}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sala_a1b8b14baf2acaf5a118fc0e426fc107d}{}\label{class_sala_a1b8b14baf2acaf5a118fc0e426fc107d}
+
+
+Modificadora que otorga las características espaciales a una estaneria adimensionada. 
+
+\begin{DoxyPrecond}{Precondición}
+La estantería del parámetro implicito esta adimensionada. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La estaneria del parámetro implicito cuenta con unas dimensiones (filas y columnas) y un tamaño (filas x columnas). 
+\end{DoxyPostcond}
+\begin{DoxyParagraph}{Coste}
+Constante. 
+\end{DoxyParagraph}
+\index{Sala@{Sala}!escribir@{escribir}}
+\index{escribir@{escribir}!Sala@{Sala}}
+\subsubsection[{\texorpdfstring{escribir()}{escribir()}}]{\setlength{\rightskip}{0pt plus 5cm}void Sala\+::escribir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sala_afd8421dde833322ed676c232e88cb77c}{}\label{class_sala_afd8421dde833322ed676c232e88cb77c}
+
+
+Consultora encargada de imprimir por pantalla la estaneria del parámetro implicito. 
+
+\begin{DoxyPrecond}{Precondición}
+Cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha impreso por pantalla la estaneria del parámetro implicito. En caso de haber un hueco vacío, se ha escrito \char`\"{}\+N\+U\+L\+L\char`\"{}. 
+\end{DoxyPostcond}
+\begin{DoxyParagraph}{Coste}
+Lineal. 
+\end{DoxyParagraph}
+\index{Sala@{Sala}!consultar\+\_\+pos@{consultar\+\_\+pos}}
+\index{consultar\+\_\+pos@{consultar\+\_\+pos}!Sala@{Sala}}
+\subsubsection[{\texorpdfstring{consultar\+\_\+pos(int i, int j)}{consultar_pos(int i, int j)}}]{\setlength{\rightskip}{0pt plus 5cm}string Sala\+::consultar\+\_\+pos (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sala_acb7088c40e1720d1604fc37a4d10443b}{}\label{class_sala_acb7088c40e1720d1604fc37a4d10443b}
+
+
+Consultora que retorna el identificador del item que se encuentra en una posicion concreta. 
+
+\begin{DoxyPrecond}{Precondición}
+Cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha impreso por pantalla la estaneria del parámetro implicito. En caso de haber un hueco vacío, se ha escrito \char`\"{}\+N\+U\+L\+L\char`\"{}. 
+\end{DoxyPostcond}
+\begin{DoxyParagraph}{Coste}
+Constante. 
+\end{DoxyParagraph}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_sala_8hh}{Sala.\+hh}\end{DoxyCompactItemize}

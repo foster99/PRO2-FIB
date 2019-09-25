@@ -1,0 +1,161 @@
+\hypertarget{pro2_8cc}{}\section{Referencia del Archivo pro2.\+cc}
+\label{pro2_8cc}\index{pro2.\+cc@{pro2.\+cc}}
+
+
+Programa principal.  
+
+
+Dependencia gráfica adjunta para pro2.\+cc\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{pro2_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{pro2_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Programa principal. 
+
+El programa incluye, para una serie de datos incorrectos específicos, un detector de error. Esto implica que si el usuario intenta realizar ciertas operaciones que no cumplan unas determinadas condiciones (como por ejemplo introducir productos no registrados) el programa informará de la existencia de un error.
+
+Pese a lo previamente citado, suponemos que el usuario introduce datos correctos relativos al acceso a salas ya que no hay control respecto a si accedemos a salas inexistentes o se introducen cantidades negativas. 
+
+\subsection{Documentación de las funciones}
+\index{pro2.\+cc@{pro2.\+cc}!main@{main}}
+\index{main@{main}!pro2.\+cc@{pro2.\+cc}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{pro2_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{pro2_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+Definición en la línea 31 del archivo pro2.\+cc.
+
+
+\begin{DoxyCode}
+31            \{
+32 
+33   \textcolor{keywordtype}{int} N;                \textcolor{comment}{// Cantidad de salas.}
+34   cin >> N;
+35   
+36   \hyperlink{class_almacen}{Almacen} A(N);            \textcolor{comment}{// Creación y lectura en preorden de la estructura del almacén (con
+       identificadores de sala).}
+37   
+38   A.lectura\_dimensiones\_salas();    \textcolor{comment}{// Lectura de las dimensiones de cada una de las salas.}
+39   
+40   \textcolor{keywordtype}{string} op;              \textcolor{comment}{// Código de operación.}
+41   
+42   \textcolor{keywordflow}{while} (cin >> op and op != \textcolor{stringliteral}{"fin"}) \{
+43     
+44     cout << op;
+45     
+46     \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"poner\_prod"}) \{
+47       \textcolor{keywordtype}{string} prod;
+48       cin >> prod;
+49       
+50       cout <<\textcolor{charliteral}{' '} << prod << endl;
+51       A.poner\_prod(prod);
+52     \}
+53     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"quitar\_prod"}) \{
+54       \textcolor{keywordtype}{string} prod;
+55       cin >> prod;
+56       
+57       cout <<\textcolor{charliteral}{' '} << prod << endl;
+58       A.quitar\_prod(prod);
+59     \}
+60     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"poner\_items"}) \{
+61       \textcolor{keywordtype}{int} sala, cant;
+62       \textcolor{keywordtype}{string} prod;
+63       cin >> sala >> prod >> cant;
+64       
+65       cout <<\textcolor{charliteral}{' '} << sala << prod << cant << endl;
+66       
+67       \textcolor{keywordtype}{int} result = A.poner\_items(sala, prod, cant);
+68       \textcolor{keywordflow}{if} (result == -1) cout << \textcolor{stringliteral}{"  error"} << endl;
+69       \textcolor{keywordflow}{else} cout <<\textcolor{stringliteral}{"  "} << result << endl;
+70     \}
+71     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"quitar\_items"}) \{
+72       \textcolor{keywordtype}{int} sala, cant;
+73       \textcolor{keywordtype}{string} prod;
+74       cin >> sala >> prod >> cant;
+75       
+76       cout <<\textcolor{charliteral}{' '} << sala << prod << cant << endl;
+77       
+78       \textcolor{keywordtype}{int} result = A.quitar\_items(sala, prod, cant);
+79       \textcolor{keywordflow}{if} (result == -1) cout << \textcolor{stringliteral}{"  error"} << endl;
+80       \textcolor{keywordflow}{else} cout <<\textcolor{stringliteral}{"  "} << result << endl;
+81       
+82     \}
+83     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"distribuir"}) \{
+84       \textcolor{keywordtype}{int} cant;
+85       \textcolor{keywordtype}{string} prod;
+86       cin >> prod >> cant;
+87       
+88       cout <<\textcolor{charliteral}{' '} << prod << cant << endl;
+89       
+90       \textcolor{keywordtype}{int} result = A.distribuir(prod, cant);
+91       \textcolor{keywordflow}{if} (result == -1) cout << \textcolor{stringliteral}{"  error"} << endl;
+92       \textcolor{keywordflow}{else} cout <<\textcolor{stringliteral}{"  "} << result << endl;
+93       
+94     \}
+95     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"compactar"}) \{
+96       \textcolor{keywordtype}{int} sala;
+97       cin >> sala;
+98       
+99       cout <<\textcolor{charliteral}{' '} << sala << endl;
+100       A.compactar(sala);
+101     \}
+102     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"reorganizar"}) \{
+103       \textcolor{keywordtype}{int} sala;
+104       cin >> sala;
+105       
+106       cout <<\textcolor{charliteral}{' '} << sala << endl;
+107       A.reorganizar(sala);
+108     \}
+109     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"redimensionar"}) \{
+110       \textcolor{keywordtype}{int} sala, fil, col;
+111       cin >> sala >> fil >>col;
+112       
+113       cout <<\textcolor{charliteral}{' '} << sala << fil << col << endl;
+114       \textcolor{keywordflow}{if} (not A.redimensionar(sala, fil, col)) cout << \textcolor{stringliteral}{"  error"} << endl;
+115     \}
+116     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"inventario"}) \{
+117       
+118       A.inventario();
+119     \}
+120     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"escribir"}) \{
+121       \textcolor{keywordtype}{int} sala;
+122       cin >> sala;
+123       
+124       cout <<\textcolor{charliteral}{' '} << sala << endl;
+125       A.escribir(sala);
+126     \}
+127     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"consultar\_pos"}) \{
+128       \textcolor{keywordtype}{int} sala, fil, col;
+129       cin >> sala >> fil >>col;
+130       
+131       cout <<\textcolor{charliteral}{' '} << sala << fil << col << endl;
+132       cout <<\textcolor{stringliteral}{"  "} << A.consultar\_pos(sala, fil, col) << endl;
+133     \}
+134     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"consultar\_prod"}) \{
+135       \textcolor{keywordtype}{string} prod;
+136       cin >> prod;
+137       
+138       cout <<\textcolor{charliteral}{' '} << prod << endl;
+139       \textcolor{keywordtype}{int} result = A.consultar\_prod(prod);
+140       
+141       \textcolor{keywordflow}{if} (result == -1) cout << \textcolor{stringliteral}{"  error"} << endl;
+142       \textcolor{keywordflow}{else} cout <<\textcolor{stringliteral}{"  "} << result << endl;
+143     \}
+144   \}
+145   
+146   cout << op << endl;
+147 \}
+\end{DoxyCode}

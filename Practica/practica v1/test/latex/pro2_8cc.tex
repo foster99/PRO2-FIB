@@ -1,0 +1,128 @@
+\hypertarget{pro2_8cc}{}\section{Referencia del Archivo pro2.\+cc}
+\label{pro2_8cc}\index{pro2.\+cc@{pro2.\+cc}}
+
+
+Programa principal.  
+
+
+Dependencia gráfica adjunta para pro2.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{pro2_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{pro2_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Programa principal. 
+
+Estamos suponiendo que los datos leídos siempre son correctos, ya que no incluímos comprobaciones al respecto. Por último, puesto que los datos de los organismos y células son naturales (identificadores, ...) usaremos números negativos para las opciones. 
+
+\subsection{Documentación de las funciones}
+\index{pro2.\+cc@{pro2.\+cc}!main@{main}}
+\index{main@{main}!pro2.\+cc@{pro2.\+cc}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{pro2_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{pro2_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+Definición en la línea 42 del archivo pro2.\+cc.
+
+
+\begin{DoxyCode}
+42            \{
+43   
+44   lectura\_almacen();    \textcolor{comment}{//lectura de la estructura del almacen}
+45   
+46   \textcolor{keywordtype}{string} op;      \textcolor{comment}{//codigo de operacion}
+47   cin >> op;
+48   
+49   \textcolor{keywordflow}{while} (op != \textcolor{stringliteral}{"fin"}) \{
+50     
+51     \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"poner\_prod"}) \{
+52       \textcolor{keywordtype}{string} prod;
+53       cin >> prod;
+54       
+55       poner\_prod(prod);
+56     \}
+57     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"quitar\_prod"}) \{
+58       \textcolor{keywordtype}{string} prod;
+59       cin >> prod;
+60       
+61       quitar\_prod(prod);
+62     \}
+63     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"poner\_items"}) \{
+64       \textcolor{keywordtype}{int} sala, cant;
+65       \textcolor{keywordtype}{string} prod;
+66       cin >> sala >> prod >> cant;
+67       
+68       poner\_items(sala, prod, cant);
+69     \}
+70     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"quitar\_items"}) \{
+71       \textcolor{keywordtype}{int} sala, cant;
+72       \textcolor{keywordtype}{string} prod;
+73       cin >> sala >> prod >> cant;
+74       
+75       quitar\_items(sala, prod, cant);
+76     \}
+77     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"distribuir"}) \{
+78       \textcolor{keywordtype}{int} cant;
+79       \textcolor{keywordtype}{string} prod;
+80       cin >> prod >> cant;
+81       
+82       distribuir(prod, cant);
+83     \}
+84     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"compactar"}) \{
+85       \textcolor{keywordtype}{int} sala;
+86       cin >> sala;
+87       
+88       compactar(sala);
+89     \}
+90     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"reorganizar"}) \{
+91       \textcolor{keywordtype}{int} sala;
+92       cin >> sala;
+93       
+94       reorganizar(sala);
+95     \}
+96     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"redimensionar"}) \{
+97       \textcolor{keywordtype}{int} sala, fil, col;
+98       cin >> sala >> fil >>col;
+99       
+100       redimensionar(sala, fil, col);
+101     \}
+102     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"inventario"}) \{
+103       
+104       inventario();
+105     \}
+106     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"escribir"}) \{
+107       \textcolor{keywordtype}{int} sala;
+108       cin >> sala;
+109       
+110       escribir(sala);
+111     \}
+112     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"consultar\_pos"}) \{
+113       \textcolor{keywordtype}{int} sala, fil, col;
+114       cin >> sala >> fil >>col;
+115       
+116       consultar\_pos(sala, fil, col);
+117     \}
+118     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"consultar\_prod"}) \{
+119       \textcolor{keywordtype}{string} prod;
+120       cin >> prod;
+121       
+122       consultar\_prod
+123     \}
+124     
+125     cin >> op;
+126   \}
+127 \}
+\end{DoxyCode}

@@ -1,0 +1,65 @@
+
+29 LLIURAMENTS REBUTS
+
+DNI 100: [1,1,0,0];  temps: 2500
+DNI 100: [1,0,0,0];  temps: 2600
+DNI 102: [1,0,0,0];  temps: 1600
+DNI 102: [1,1,0,0];  temps: 2400
+DNI 102: [1,1,1,0];  temps: 4000
+DNI 105: [1,1,1,1];  temps: 3000
+DNI 105: [1,1,1,0];  temps: 4000
+DNI 106: [1,1,1,1];  temps: 3000
+DNI 120: [1,0,1,0];  temps: 2000
+DNI 120: [1,1,1,0];  temps: 4000
+DNI 130: [1,1,1,1];  temps: 2600
+DNI 130: [1,1,1,1];  temps: 2700
+DNI 132: [1,1,1,0];  temps: 2500
+DNI 132: [1,1,1,0];  temps: 3000
+DNI 135: [1,0,0,0];  temps: 1800
+DNI 135: [1,0,1,0];  temps: 2700
+DNI 135: [1,1,1,0];  temps: 3600
+DNI 135: [1,0,1,0];  temps: 4000
+DNI 136: [1,0,1,0];  temps: 3000
+DNI 145: [1,0,1,0];  temps: 4000
+DNI 145: [1,1,1,1];  temps: 4500
+DNI 152: [1,0,1,0];  temps: 2000
+DNI 152: [1,1,1,0];  temps: 3000
+DNI 152: [1,1,0,0];  temps: 4000
+DNI 156: [1,0,0,0];  temps: 1000
+DNI 156: [1,1,0,0];  temps: 2000
+DNI 156: [1,1,1,0];  temps: 3000
+DNI 156: [1,1,1,1];  temps: 4000
+DNI 158: [1,0,0,0];  temps: 2000
+
+CLASSIFICACIO
+
+0 jocs de proves superats
+
+1 jocs de proves superats
+DNI 158: [1,0,0,0];  temps: 2000
+
+2 jocs de proves superats
+DNI 100: [1,1,0,0];  temps: 2500
+DNI 136: [1,0,1,0];  temps: 3000
+
+3 jocs de proves superats
+DNI 102: [1,1,1,0];  temps: 4000
+DNI 120: [1,1,1,0];  temps: 4000
+DNI 132: [1,1,1,0];  temps: 3000
+DNI 135: [1,1,1,0];  temps: 3600
+DNI 152: [1,1,1,0];  temps: 3000
+
+4 jocs de proves superats
+DNI 105: [1,1,1,1];  temps: 3000
+DNI 106: [1,1,1,1];  temps: 3000
+DNI 130: [1,1,1,1];  temps: 2700
+DNI 145: [1,1,1,1];  temps: 4500
+DNI 156: [1,1,1,1];  temps: 4000
+
+LLIURAMENTS DE 156
+DNI 156: [1,0,0,0];  temps: 1000
+DNI 156: [1,1,0,0];  temps: 2000
+DNI 156: [1,1,1,0];  temps: 3000
+DNI 156: [1,1,1,1];  temps: 4000
+
+NO HI HA LLIURAMENTS DE 103

@@ -1,0 +1,28 @@
+#include "Eines_Vec_Lliu.hh"
+
+
+// NOMÉS PODEU MODIFICAR AQUEST FITXER.
+// AQUEST ES L'ÚNIC FITXER QUE S'UTILITZARÀ PER AVALUAR EL VOSTRE LLIURAMENT.
+
+// SOLO PODEIS MODIFICAR ESTE ARCHIVO.
+// ESTE ARCHIVO ES EL UNICO QUE SE UTILIZARA PARA EVALUAR VUESTRA ENTREGA.
+
+
+
+// Aquest mètode forma part de la implementació de la classe Lliurament.
+// L'especificació d'aquest mètode és al fitxer Lliurament.hh
+bool Lliurament::millor(const Lliurament& e1, const Lliurament& e2) {
+  // Escriviu aquí el cos del mètode 'millor'
+
+}
+
+
+// Aquesta funció és una funció del mòdul funcional Eines_Vec_Lliu. 
+// No és un mètode de cap classe.
+// S'utilitza a la funció main del fitxer pro2.cc
+// L'especificació d'aquesta funció és al fitxer Eines_Vec_Lliu.hh 
+void classifica(int n_lliu, const vector<Lliurament>& v, vector<vector<Lliurament> >& m) {
+  // Escriviu aquí el cos de la funció 'classifica' 
+
+}
+
